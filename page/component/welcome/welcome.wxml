@@ -1,0 +1,10 @@
+<!--page/component/welcome/welcome.wxml-->
+<view class="head"></view>
+<view class="before"><text class="title">欢迎进入俊客在线</text></view>
+<view class="before"></view>
+<view class="img">
+	<image class="img-content" src="/image/logo1.png"></image>
+</view>
+<view class="after"><text>v1.3.0</text></view>
+<button open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">点击进入</button>
+<!--<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">获得用户电话</button> -->

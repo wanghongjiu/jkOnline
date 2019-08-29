@@ -1,0 +1,38 @@
+/* page/component/welcome/welcome.wxss */
+page{
+	background-color: #FFF;
+}
+.head{
+	display: flex;
+	height: 80rpx;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+.before,.after{
+	display: flex;
+	height: 140rpx;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+}
+
+.img{
+	display: flex;
+	width: 100%;
+	height: 300rpx;
+	justify-content: center;
+}
+.img-content{
+	width: 300rpx;
+	height: 300rpx;
+}
+.title{
+	font-size: 36px;
+	color: #191970;
+	/* text-shadow: 0 0 0.2em #87F, 0 0 0.2em #87F, 0 0 0.2em #87F; */ 
+	text-shadow: 6px 6px 6px #696969;
+}
+button{
+	margin: 50px;
+}

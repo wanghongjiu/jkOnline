@@ -1,0 +1,29 @@
+<view class="main">
+    <view class="title">选择客户</view>
+    <navigator url="../customer/customer">
+        <view wx:if="{{hasAddress}}" class="orders-address">
+            <text class="orders-address-name">客户: {{customer}}</text>
+        </view>
+        <view wx:else class="orders-no-address">选择客户</view>
+    </navigator>
+    <view class="section">
+        <textarea bindblur="bindTextAreaBlur" auto-height placeholder="添加备注" />
+    </view>
+
+    <view class="orders-box">
+        <view wx:for="{{orders}}" wx:key="index" class="orders-list">
+            <image class="orders-thumb" src="https://junke.applinzi.com/miniapp/{{item.image}}"></image>
+            <view class="orders-pro-name">{{item.title}}</view>
+            <view class="orders-pro-price">￥{{item.price}}</view>
+            <view class="orders-count-num">×{{item.num}}</view>
+        </view>
+    </view>
+
+    <view class="orders-footer">
+        <view class="orders-footer-total">付款合计：￥{{total}}</view>
+        <view class="orders-footer-btn" bindtap="toPay">
+            <!-- <navigator url="../ordersConfirm/ordersConfirm" open-type="redirect">确认订单</navigator> -->
+            <navigator>确认订单</navigator>
+        </view>
+    </view>
+</view>

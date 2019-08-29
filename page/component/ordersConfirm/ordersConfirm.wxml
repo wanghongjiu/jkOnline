@@ -1,0 +1,25 @@
+<!--page/component/ordersConfirm/ordersConfirm.wxml-->
+<view class="main">
+    <view class="orders-header">
+        
+            <view class="orders-tag">订单号：</view><view class="orders-sn">{{orderInfo.orderSn}}</view>        
+            <view class="orders-tag">订货人信息：</view><view class="orders-sn">{{userInfo.nickName}}</view>        
+            <view class="orders-tag">订货时间：</view><view class="orders-date">{{orderInfo.orderDate}}</view>
+            <view class="orders-tag">客户：</view><view class="orders-date">{{orderInfo.customer}}</view>
+        
+    </view>
+    <view class="select-title"><text>订单明细</text></view>
+    <view class="orders-box">
+        <view wx:for="{{orders}}" wx:key="index" class="orders-list">
+            <image class="orders-thumb" src="https://junke.applinzi.com/miniapp/{{item.image}}"></image>
+            <view class="orders-pro-name">{{item.title}}</view>
+            <view class="orders-pro-price">￥{{item.price}}</view>
+            <view class="orders-count-num">×{{item.num}}</view>
+        </view>
+    </view>
+
+    <view class="orders-footer">
+        <view class="orders-footer-total">付款合计：￥{{total}}</view>
+        <view class="orders-footer-btn" bindtap="toConfirm">提交订单</view>
+    </view>
+</view>

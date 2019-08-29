@@ -1,0 +1,10 @@
+<view class="main">
+    <view class="form-box">
+        <form bindsubmit="formSubmit">
+            <picker bindchange="bindPickerChange" range="{{customer}}" name="customer">
+				<view>选择客户: {{customer[index]}}</view>
+			</picker>
+            <button form-type="submit">确定</button>
+        </form>
+    </view>
+</view>

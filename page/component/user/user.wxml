@@ -1,0 +1,26 @@
+<view class="main">
+    <view class="header">
+        <image src="{{thumb}}" class="thumb"></image>
+        <text class="nickname">{{nickname}}</text>
+        <!-- <text class="about">关于我们</text> -->
+    </view>
+    <view class="orders-box">
+        <view class="orders">我的订单</view>
+        <view class="orders-list" wx:for="{{orders}}" wx:key="index">
+            <view class="orders-number">客户：{{item.customer}}</view>
+            <view class="orders-number">订单编号：{{item.orderSn}}</view>
+            <view class="orders-number">订单日期：{{item.orderDate}}</view>
+            <text class="orders-status">{{item.status}}</text>
+            <view class="orders-detail" wx:for="{{item.detail}}">
+                <image src="https://junke.applinzi.com/miniapp/{{item.image}}"></image>
+                <view class="">{{item.goods_name}}</view>
+                <view class="">{{item.num}}{{item.unit}} × {{item.price}}<lable class="gift"> {{item.is_gift}} </lable></view>               
+            </view>
+            <view class="orders-footer">
+                <text>总金额：￥{{item.je}}</text>
+                <button wx:if="{{item.status == '未完成'}}" size="mini" class="orders-btn" bindtap="cancelOrders" data-index='{{item.orderSn}}'>取消</button>
+                <button wx:if="{{item.status == '未完成'}}" size="mini" class="orders-btn" bindtap="confirmOrders" data-index='{{item.orderSn}}'>确认</button>
+            </view>
+        </view>
+    </view>
+</view>
