@@ -89,7 +89,7 @@ Page({
               wx.request({
                 url:'https://junke.applinzi.com/miniapp/ajaxQueryBrandById.php?id=' + pp.id,
                 success(res){
-                  console.log(res.data);
+                  //console.log(res.data);
                   self.setData({
                       detail : res.data,
                       details : res.data
